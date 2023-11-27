@@ -133,11 +133,13 @@
     <ClCompile Include="Exponentiation.h" />
     <ClCompile Include="fourbasicoperation.cpp" />
     <ClCompile Include="functionexcersises.cpp" />
+    <ClCompile Include="heronformula.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FourBasicOperation.h" />
     <ClInclude Include="FunctionExcersises.h" />
+    <ClInclude Include="HeronFormula.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -2,6 +2,7 @@
 #include "Exponentiation.h"
 #include "FourBasicOperation.h"
 #include "FunctionExcersises.h"
+#include "HeronFormula.h"
 
 
 int main() {
@@ -26,6 +27,10 @@ int main() {
     int num_1 = 0;
     int num_2 = 0;
     exponentiation.run_exponentiation_procedure(num_1, num_2);
+
+    // Heron formula task
+    HeronFormula heronformula;
+    heronformula.heron_formula_process();
   
     return 0;
 }

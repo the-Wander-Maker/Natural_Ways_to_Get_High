@@ -36,12 +36,18 @@
     <ClCompile Include="exponentiation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="heronformula.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FourBasicOperation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FunctionExcersises.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HeronFormula.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
