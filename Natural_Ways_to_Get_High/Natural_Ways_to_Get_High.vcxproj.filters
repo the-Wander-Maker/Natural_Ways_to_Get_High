@@ -39,6 +39,9 @@
     <ClCompile Include="heronformula.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="capitalreplace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FourBasicOperation.h">
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="HeronFormula.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CapitalReplace.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

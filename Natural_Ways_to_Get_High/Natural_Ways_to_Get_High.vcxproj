@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="capitalreplace.cpp" />
     <ClCompile Include="equation.cpp" />
     <ClCompile Include="Equation.h" />
     <ClCompile Include="exponentiation.cpp" />
@@ -137,6 +138,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CapitalReplace.h" />
     <ClInclude Include="FourBasicOperation.h" />
     <ClInclude Include="FunctionExcersises.h" />
     <ClInclude Include="HeronFormula.h" />

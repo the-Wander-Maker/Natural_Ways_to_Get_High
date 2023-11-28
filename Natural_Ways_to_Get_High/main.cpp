@@ -3,12 +3,13 @@
 #include "FourBasicOperation.h"
 #include "FunctionExcersises.h"
 #include "HeronFormula.h"
+#include "CapitalReplace.h"
 
 
 int main() {
 
-    std::cout << " -----------------------------------------------------------------------------------------" << std::endl;
-    std::cout << " --------------------------------Natural_Ways_to_Get_High-1.0-----------------------------" << std::endl;
+    std::cout << "-----------------------------------------------------------------------------------------" << std::endl;
+    std::cout << "--------------------------------Natural_Ways_to_Get_High-1.0-----------------------------" << std::endl;
 
     // Equation task
     Equation equation; // Using the default constructor
@@ -31,6 +32,10 @@ int main() {
     // Heron formula task
     HeronFormula heronformula;
     heronformula.heron_formula_process();
+
+    // Capital replace task
+    CapitalReplace capitalreplace;
+    capitalreplace.capital_replace_process();
   
     return 0;
 }
