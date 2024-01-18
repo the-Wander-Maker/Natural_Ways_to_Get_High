@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="capitalreplace.cpp" />
+    <ClCompile Include="containerssort.cpp" />
     <ClCompile Include="equation.cpp" />
     <ClCompile Include="Equation.h" />
     <ClCompile Include="exponentiation.cpp" />
@@ -139,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CapitalReplace.h" />
+    <ClInclude Include="ContainersSort.h" />
     <ClInclude Include="FourBasicOperation.h" />
     <ClInclude Include="FunctionExcersises.h" />
     <ClInclude Include="HeronFormula.h" />

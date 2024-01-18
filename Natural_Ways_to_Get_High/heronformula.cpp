@@ -1,6 +1,8 @@
 #include "HeronFormula.h"
 
 void HeronFormula::heron_formula_process(){
+	std::cout << std::endl << "----------------- Heron Forumla task ------------------" << std::endl;
+
 	double a = 0, b = 0, c = 0;
 
 	std::cout << std::endl << "Please give me the triangles three sides in cm: " << std::endl;

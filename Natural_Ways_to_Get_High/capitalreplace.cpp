@@ -19,6 +19,8 @@ void CapitalReplace::swapper(std::string& szoveg, const int mettol, const int me
 
 void CapitalReplace::capital_replace_process() {
 	try {
+		std::cout << std::endl << "----------------- Capital Replace Task ------------------" << std::endl;
+
 		std::string input_text;
 		std::cout << std::endl << "Please enter the text you wish to use for the capital letter replacement. Please enter all uppercase text: " << std::endl;
 		
@@ -48,7 +50,7 @@ void CapitalReplace::capital_replace_process() {
 				previous_text = i;
 			}
 		}
-		std::cout << input_text;
+		std::cout << "The converted text is : " << input_text << std::endl;
 	}
 	catch (const std::exception& e) {
 		// Catch and handle the exception

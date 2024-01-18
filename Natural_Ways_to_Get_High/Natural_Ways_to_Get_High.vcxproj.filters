@@ -42,6 +42,9 @@
     <ClCompile Include="capitalreplace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="containerssort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FourBasicOperation.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CapitalReplace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainersSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

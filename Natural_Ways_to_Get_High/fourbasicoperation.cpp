@@ -1,6 +1,8 @@
 #include "FourBasicOperation.h"
 
 void FourBasicOperation::get_user_input() {
+    std::cout << std::endl << "----------------- Four Basic Operations task ------------------" << std::endl;
+
     std::cout << std::endl << "Can you please enter two numbers?: " << std::endl;
 
     std::cin >> num_one;

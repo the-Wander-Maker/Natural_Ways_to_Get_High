@@ -4,6 +4,7 @@
 #include "FunctionExcersises.h"
 #include "HeronFormula.h"
 #include "CapitalReplace.h"
+#include "ContainersSort.h"
 
 
 int main() {
@@ -36,6 +37,11 @@ int main() {
     // Capital replace task
     CapitalReplace capitalreplace;
     capitalreplace.capital_replace_process();
-  
-    return 0;
+
+    // Sorting containers task
+    ContainersSort containersSort;
+    containersSort.sortingProcedure();
+
+	
+ 
 }
