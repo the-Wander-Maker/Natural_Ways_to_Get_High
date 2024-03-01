@@ -5,6 +5,7 @@
 #include "HeronFormula.h"
 #include "CapitalReplace.h"
 #include "ContainersSort.h"
+#include "Crosswords.h"
 
 
 int main() {
@@ -42,6 +43,8 @@ int main() {
     ContainersSort containersSort;
     containersSort.sortingProcedure();
 
-	
+    // Crosswords task
+    Crosswords crosswords;
+    crosswords.crosswordsExec();
  
 }

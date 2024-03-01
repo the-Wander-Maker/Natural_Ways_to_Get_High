@@ -129,6 +129,8 @@
   <ItemGroup>
     <ClCompile Include="capitalreplace.cpp" />
     <ClCompile Include="containerssort.cpp" />
+    <ClCompile Include="crosswords.cpp" />
+    <ClCompile Include="Crosswords.h" />
     <ClCompile Include="equation.cpp" />
     <ClCompile Include="Equation.h" />
     <ClCompile Include="exponentiation.cpp" />

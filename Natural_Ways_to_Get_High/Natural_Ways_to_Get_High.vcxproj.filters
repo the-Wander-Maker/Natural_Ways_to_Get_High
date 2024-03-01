@@ -45,6 +45,12 @@
     <ClCompile Include="containerssort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Crosswords.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="crosswords.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FourBasicOperation.h">
