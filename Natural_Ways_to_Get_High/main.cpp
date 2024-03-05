@@ -11,7 +11,8 @@
 #include "PrimeNum.h"
 #include "RandomDice.h"
 #include "StringSwitch.h"
-
+#include "StringSwitch2.h"
+#include "ConstructorTest.h"
 
 int main() {
 
@@ -71,4 +72,14 @@ int main() {
     // String Capital Switch task
     StringSwitch stringSwitch;
     stringSwitch.stringSwitchExec();
+
+    // String switch 2 task
+    StringSwitch2 stringSwitch2;
+    stringSwitch2.stringSwitch2Exec();
+
+    // Constructor calling test task
+    Test constructorTest;
+    constructorTest.constructorTestExec();
+
+
 }

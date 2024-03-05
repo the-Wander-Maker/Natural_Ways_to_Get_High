@@ -46,7 +46,7 @@ void StringSwitch::stringSwitchExec() {
 	int elozoszovege = 0;
 	char response;
 	szoveg.push_back(' ');
-	for (int i = 0; i < szoveg.length(); i++) {
+	for (int i = 0; i < szoveg.length(); ++i) {
 		if (isWhitespace(szoveg[i])) {
 			if (i - elozoszovege != 1) {//valahogy ide be kell ügyeskedni a csere2-t, és fel kell tudnia ismerni, hogy kicsi vagy nagybetûs-e a szó
 				std::cout << "Szeretne a szot kisbetusre cserelni? " << szoveg.substr(elozoszovege == 0 ? 0 : elozoszovege + 1, i - elozoszovege) << std::endl;

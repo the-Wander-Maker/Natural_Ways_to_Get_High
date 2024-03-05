@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="capitalreplace.cpp" />
+    <ClCompile Include="constructortest.cpp" />
     <ClCompile Include="containerssort.cpp" />
     <ClCompile Include="crosswords.cpp" />
     <ClCompile Include="Crosswords.h" />
@@ -146,9 +147,11 @@
     <ClCompile Include="primenumber.cpp" />
     <ClCompile Include="randomdice.cpp" />
     <ClCompile Include="stringswitch.cpp" />
+    <ClCompile Include="stringswitch2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CapitalReplace.h" />
+    <ClInclude Include="ConstructorTest.h" />
     <ClInclude Include="ContainersSort.h" />
     <ClInclude Include="CylinderVolume.h" />
     <ClInclude Include="FourBasicOperation.h" />
@@ -158,6 +161,7 @@
     <ClInclude Include="PrimeNum.h" />
     <ClInclude Include="RandomDice.h" />
     <ClInclude Include="StringSwitch.h" />
+    <ClInclude Include="StringSwitch2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
