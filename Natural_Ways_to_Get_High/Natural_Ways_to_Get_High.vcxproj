@@ -131,21 +131,29 @@
     <ClCompile Include="containerssort.cpp" />
     <ClCompile Include="crosswords.cpp" />
     <ClCompile Include="Crosswords.h" />
+    <ClCompile Include="cylindervolume.cpp" />
     <ClCompile Include="equation.cpp" />
     <ClCompile Include="Equation.h" />
     <ClCompile Include="exponentiation.cpp" />
     <ClCompile Include="Exponentiation.h" />
     <ClCompile Include="fourbasicoperation.cpp" />
     <ClCompile Include="functionexcersises.cpp" />
+    <ClCompile Include="futarerettsegi.cpp" />
+    <ClCompile Include="godrokerettsegi.cpp" />
+    <ClCompile Include="GodrokErettsegi.h" />
     <ClCompile Include="heronformula.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="primenumber.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CapitalReplace.h" />
     <ClInclude Include="ContainersSort.h" />
+    <ClInclude Include="CylinderVolume.h" />
     <ClInclude Include="FourBasicOperation.h" />
     <ClInclude Include="FunctionExcersises.h" />
+    <ClInclude Include="FutarErettsegi.h" />
     <ClInclude Include="HeronFormula.h" />
+    <ClInclude Include="PrimeNum.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

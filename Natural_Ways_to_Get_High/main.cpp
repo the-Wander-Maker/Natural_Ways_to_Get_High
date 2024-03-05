@@ -6,6 +6,9 @@
 #include "CapitalReplace.h"
 #include "ContainersSort.h"
 #include "Crosswords.h"
+#include "GodrokErettsegi.h"
+#include "FutarErettsegi.h"
+#include "PrimeNum.h"
 
 
 int main() {
@@ -47,4 +50,18 @@ int main() {
     Crosswords crosswords;
     crosswords.crosswordsExec();
  
+    // Godrok Erettsegi task
+    GodrokErettsegi godrok;
+    godrok.godrokErettsegiExec();
+
+    // Futar Erettsegi task
+    Futar futar;
+    futar.futarExec();
+
+    // Primenumber task
+    PrimeNum primeNum;
+    primeNum.primeExec();
+
+
+
 }

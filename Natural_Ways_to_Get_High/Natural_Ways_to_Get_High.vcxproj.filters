@@ -51,6 +51,21 @@
     <ClCompile Include="crosswords.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GodrokErettsegi.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="godrokerettsegi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="futarerettsegi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cylindervolume.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="primenumber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FourBasicOperation.h">
@@ -66,6 +81,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ContainersSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FutarErettsegi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CylinderVolume.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrimeNum.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

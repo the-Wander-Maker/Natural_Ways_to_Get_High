@@ -29,7 +29,7 @@ C I N N A M O N
 
 #include <iostream>
 #include <string>
-#include <algorithm>
+#include <algorithm> 
 
 class Crosswords {
 public:
