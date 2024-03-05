@@ -66,6 +66,12 @@
     <ClCompile Include="primenumber.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="randomdice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stringswitch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FourBasicOperation.h">
@@ -90,6 +96,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PrimeNum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomDice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StringSwitch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

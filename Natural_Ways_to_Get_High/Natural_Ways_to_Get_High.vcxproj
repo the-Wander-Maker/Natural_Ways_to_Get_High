@@ -144,6 +144,8 @@
     <ClCompile Include="heronformula.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="primenumber.cpp" />
+    <ClCompile Include="randomdice.cpp" />
+    <ClCompile Include="stringswitch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CapitalReplace.h" />
@@ -154,6 +156,8 @@
     <ClInclude Include="FutarErettsegi.h" />
     <ClInclude Include="HeronFormula.h" />
     <ClInclude Include="PrimeNum.h" />
+    <ClInclude Include="RandomDice.h" />
+    <ClInclude Include="StringSwitch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

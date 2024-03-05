@@ -9,6 +9,8 @@
 #include "GodrokErettsegi.h"
 #include "FutarErettsegi.h"
 #include "PrimeNum.h"
+#include "RandomDice.h"
+#include "StringSwitch.h"
 
 
 int main() {
@@ -62,6 +64,11 @@ int main() {
     PrimeNum primeNum;
     primeNum.primeExec();
 
+    // RandomDice task
+    RandomDice randomDice;
+    randomDice.randomDiceExec();
 
-
+    // String Capital Switch task
+    StringSwitch stringSwitch;
+    stringSwitch.stringSwitchExec();
 }
