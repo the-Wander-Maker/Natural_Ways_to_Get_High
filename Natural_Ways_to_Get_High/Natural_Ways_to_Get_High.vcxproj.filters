@@ -78,6 +78,9 @@
     <ClCompile Include="constructortest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="vectormanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FourBasicOperation.h">
@@ -114,6 +117,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ConstructorTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
