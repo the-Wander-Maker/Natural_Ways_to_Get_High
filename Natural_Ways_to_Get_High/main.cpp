@@ -80,6 +80,4 @@ int main() {
     // Constructor calling test task
     Test constructorTest;
     constructorTest.constructorTestExec();
-
-
 }

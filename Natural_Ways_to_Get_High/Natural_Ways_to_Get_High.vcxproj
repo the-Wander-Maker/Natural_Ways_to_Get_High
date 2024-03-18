@@ -148,7 +148,6 @@
     <ClCompile Include="randomdice.cpp" />
     <ClCompile Include="stringswitch.cpp" />
     <ClCompile Include="stringswitch2.cpp" />
-    <ClCompile Include="vectormanager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CapitalReplace.h" />
@@ -163,7 +162,6 @@
     <ClInclude Include="RandomDice.h" />
     <ClInclude Include="StringSwitch.h" />
     <ClInclude Include="StringSwitch2.h" />
-    <ClInclude Include="VectorManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

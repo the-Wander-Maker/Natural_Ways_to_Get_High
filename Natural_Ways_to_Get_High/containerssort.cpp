@@ -145,5 +145,4 @@ void ContainersSort::sortingProcedure() {
 		std::sort(A5.begin(), A5.end());
 		writeout<int>(A5);
 	}
-	system("pause");
 }
