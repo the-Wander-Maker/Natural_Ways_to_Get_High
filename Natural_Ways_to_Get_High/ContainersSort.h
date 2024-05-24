@@ -4,8 +4,7 @@
 #include <random>
 #include <algorithm>
 
-// program létrehoz két tömböt, rendezi õket,
-// majd egy harmadikba rendezetten összefûzi mindkettõt
+// the program makes two vector, and sum them into a third one
 
 class ContainersSort {
 public:

@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 
+// TODO refactor
+
 /*1. Bekérsz egy szöveget, bekérsz egy szót (keresett),
 bekérsz még egy másik szót (csere) és lecseréled a
 szövegben az összes megtalált keresett szó elõfordulást a

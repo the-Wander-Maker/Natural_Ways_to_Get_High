@@ -1,5 +1,6 @@
 #pragma once
 
+// TODO refactor
 struct fuvarAdatok {
     int melyikNap;
     int fuvarokSzama;

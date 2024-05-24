@@ -2,7 +2,6 @@
 
 class RandomDice {
 public:
-
 	void randomDiceExec();
 private:
 

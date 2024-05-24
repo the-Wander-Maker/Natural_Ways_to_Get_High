@@ -2,8 +2,6 @@
 
 class StringSwitch {
 public:
-
 	void stringSwitchExec();
-
 private:
 };
