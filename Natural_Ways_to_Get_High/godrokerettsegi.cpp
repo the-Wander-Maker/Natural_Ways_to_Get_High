@@ -1,197 +1,163 @@
 ﻿#include "GodrokErettsegi.h"
 
-// TODO Refactor
 
 void GodrokErettsegi::godrokErettsegiExec() {
-    //1.feladat Olvassa be és tárolja el a melyseg.txt fájl tartalmát! Írja ki a képernyõre, hogy az
-    //adatforrás hány adatot tartalmaz!
-    // A fájl megnyitása
-    const std::string filename = "melyseg.txt";
-    std::ifstream inputFile(filename);
+    //1. task Read in and store the melyseg.txt file data! Write to the screend that the file contains how many data.
+    // Open file
+    const std::string filename_godrok = "melyseg.txt";
+    std::ifstream inputFile(filename_godrok);
     if (!inputFile.is_open()) {
-        std::cout << "Nem sikerult megnyitni a fajlt: " << filename << std::endl;
+        std::cout << "Can not open the input file: " << filename_godrok << std::endl;
         return;
     }
 
-    // Adatok beolvasása
-    std::vector<unsigned char> adatok;
+    // Data read in
+    std::vector<unsigned char> datas;
     int x;
     while (inputFile >> x) {
-        adatok.push_back(static_cast<unsigned char>(x));
+        datas.push_back(static_cast<unsigned char>(x));
     }
     inputFile.close();
 
-    std::cout << "1.feladat" << std::endl;
+    // 1. task
+    std::cout << "1. task" << std::endl;
+    std::cout << "Number of datas in the input file: " << datas.size() << std::endl;
 
-
-    /*for (unsigned char i : adatok) {
-        std::cout << static_cast<int>(i) << ' ';
-    }*/
-    std::cout << "A fajl adatainak a szama: " << adatok.size() << std::endl;
-
-    //2. feladat Olvasson be egy távolságértéket, majd írja a képernyõre, hogy milyen mélyen van a gödör
-    //alja azon a helyen!Ezt a távolságértéket használja majd a 6. feladat megoldása során is!
-
+    // 2. task Read in a distance value and write to the screen how deep is the pit at that point. Use this value to task 6.
     std::cout << std::endl;
-    std::cout << "2. feladat" << std::endl;
+    std::cout << "2. task" << std::endl;
 
+    int read_in_distance_temp;
+    std::cin >> read_in_distance_temp;
+    const int read_in_distance = read_in_distance_temp;
 
-    int temp; // MATE: hülye egy változónév, fogalmam sincs, hogy mit tárolsz benne, ha nem nézem meg, hogy hol tárolsz el benne dolgot
-    std::cout << "Adjon meg egy tavolsagerteket: ";
-    std::cin >> temp;
-    const int beolvasottTavolsag = temp;
+    std::cout << "At this place the pit is " << static_cast<int>(datas[read_in_distance - 1]) << " meter deep. " << std::endl;
 
-    std::cout << "Ezen a helyen a felszin " << static_cast<int>(adatok[beolvasottTavolsag - 1]) << " meter melyen van. " << std::endl;
-
-    //3.feladat Határozza meg, hogy a felszín hány százaléka maradt érintetlen és jelenítse meg 2 tizedes
-    //pontossággal!
-
+    // 3. task Write to the screen that how many percent of the ground is untouched. 0.00 precise value is needed
     std::cout << std::endl;
-    std::cout << "3. feladat" << std::endl;
+    std::cout << "3. task" << std::endl;
 
-
-    int darabNulla = 0;
-    for (int i = 0; i < adatok.size(); i++) {
-        if (adatok[i] == 0) {
-            darabNulla++;
+    int count_zero = 0;
+    for (int i = 0; i < datas.size(); i++) {
+        if (datas[i] == 0) {
+            count_zero++;
         }
     }
-    //std::cout << "Ennyi darab 0-as hely van: " << static_cast<int>(szazalekosszeg.size());
-    float felszinszazalek = (static_cast<float>(darabNulla) / static_cast<float>(adatok.size())) * 100;
-    std::cout << "Az erintetlen terulet aranya: " << std::fixed << std::setprecision(2) << static_cast<float>(felszinszazalek) << "% " << std::endl; // MATE: iomanipulációt kell csinálni, hogy a formázása az adatnak olyan legyen, amit elvárunk. Ilyenkor vagy Google, vagy cppref-en iomanip header-ben keresel.
 
-    //4. feladat Írja ki a godrok.txt fájlba a gödrök leírását, azaz azokat a számsorokat, amelyek egy-egy
-    // gödör méterenkénti mélységét adják meg!Minden gödör leírása külön sorba kerüljön!Az
-    //  állomány pontosan a gödrök számával egyezõ számú sort tartalmazzon!
+    float untouched_ground_percent = (static_cast<float>(count_zero) / static_cast<float>(datas.size())) * 100;
+    std::cout << "The average of the untouched ground: " << std::fixed << std::setprecision(2) << static_cast<float>(untouched_ground_percent) << "% " << std::endl; // MATE: iomanipulációt kell csinálni, hogy a formázása az adatnak olyan legyen, amit elvárunk. Ilyenkor vagy Google, vagy cppref-en iomanip header-ben keresel.
 
-    // MATE: ez nem a feladat része. Azt mondja, hogy csak olyankor írj ki, amikor kell mit kiírni. A mintában sincs. Ilyenkor vagy kérdezz, hogy mit akar ezzel, vagy hagyjad ki, mert nem volt a spec-ben.
+    // 4. task Write into godrok.txt file the pits description, so all the numbers which describe ones pit deepness in meter.
+    // All pits description should be written in one line. The file has to contain precisely the same amount of line than the pits number.
+    std::cout << std::endl;
+    std::cout << "4. task" << std::endl;
 
     const std::string filename2 = "godrok.txt";
     std::ofstream outputFile(filename2);
     if (!outputFile.is_open()) {
-        std::cout << "Nem sikerult megnyitni a fajlt: " << filename2 << std::endl;
+        std::cout << "Can not open the input file: " << filename2 << std::endl;
         return;
     }
-    // Adatok kiírása
+    // Write out data
     std::ofstream ostrm(filename2);
-    unsigned char elozoAdat = 0;
-    for (auto adat : adatok) {
-        if (adat != 0) {
-            ostrm << static_cast<int>(adat) << " ";
+    unsigned char prev_data = 0;
+    for (auto data : datas) {
+        if (data != 0) {
+            ostrm << static_cast<int>(data) << " ";
         }
-        if (elozoAdat != 0 && adat == 0) {
+        if (prev_data != 0 && data == 0) {
             ostrm << std::endl;
         }
-        elozoAdat = adat;
+        prev_data = data;
     }
 
-    //5. feladat
-    std::cout << std::endl << "5. feladat" << std::endl;
+    //5. task
+    std::cout << std::endl << "5. task" << std::endl;
 
-    int darabGodrok = 0;
-    elozoAdat = 0;
-    for (int i = 0; i < adatok.size(); i++) {
-        if (elozoAdat != 0 && adatok[i] == 0) {
-            darabGodrok += 1;
+    int number_of_pits = 0;
+    prev_data = 0;
+    for (int i = 0; i < datas.size(); i++) {
+        if (prev_data != 0 && datas[i] == 0) {
+            number_of_pits += 1;
         }
-        elozoAdat = adatok[i];
+        prev_data = datas[i];
     }
-    std::cout << "A godrok szama: " << darabGodrok << std::endl;
+    std::cout << "The number of pits: " << number_of_pits << std::endl;
 
-    //6. feladat 
+    //6. task 
     //a.
 
-    std::cout << std::endl << "6. feladat" << std::endl;
+    std::cout << std::endl << "6. task" << std::endl;
     std::cout << "a)" << std::endl;
 
 
-    int start = 0; //ezekre késõbb még szükség lesz, azért itt deklarálom
-    int end = 0;   // MATE: ez jó, de az elnevezés lehetne még erősebb, sok minden kezdődhet meg zárulhat
-    if (adatok[beolvasottTavolsag - 1] == 0) {
-        std::cout << "Az adott helyen nincs godor." << std::endl;
+    int start_of_pit = 0;
+    int end_of_pit = 0;
+    if (datas[read_in_distance - 1] == 0) {
+        std::cout << "At the given place there is not any pit." << std::endl;
     }
     else {
-        start = beolvasottTavolsag;
-        while (adatok[start - 1] != 0) {
-            start--;
+        start_of_pit = read_in_distance;
+        while (datas[start_of_pit - 1] != 0) {
+            start_of_pit--;
         }
 
-        end = beolvasottTavolsag;
-        while (adatok[end - 1] != 0) {
-            end++;
+        end_of_pit = read_in_distance;
+        while (datas[end_of_pit - 1] != 0) {
+            end_of_pit++;
         }
-        end--;
+        end_of_pit--;
 
-        std::cout << "A godor kezdete: " << (start + 1) << " meter, a godor vege : " << end << " meter." << std::endl;
+        std::cout << "The start of the pit: " << (start_of_pit + 1) << " meter, the end of the pit: " << end_of_pit << " meter." << std::endl;
 
         //b.
-        int maxMely = 0;
-        for (int i = start; i < end; i++) {
-            if (adatok[i] > adatok[maxMely]) {
-                maxMely = i;
+        int max_deep = 0;
+        for (int i = start_of_pit; i < end_of_pit; i++) {
+            if (datas[i] > datas[max_deep]) {
+                max_deep = i;
             }
         }
 
-        // balra, azaz a start fele
-        int balra = maxMely - 1;
-        while (balra >= start && adatok[balra] >= adatok[balra + 1]) {
-            balra--;
+        // left, so closer to start
+        int left = max_deep - 1;
+        while (left >= start_of_pit && datas[left] >= datas[left + 1]) {
+            left--;
         }
 
-        int jobbra = maxMely + 1;
-        while (jobbra <= end && adatok[jobbra] >= adatok[jobbra - 1]) {
-            jobbra++;
+        int right = max_deep + 1;
+        while (right <= end_of_pit && datas[right] >= datas[right - 1]) {
+            right++;
         }
         std::cout << "b)" << std::endl;
-        if (balra == start && jobbra == end) {
-            std::cout << "Folyamatosan melyul.";
+        if (left == start_of_pit && right == end_of_pit) {
+            std::cout << "Continously getting deeper.";
         }
         else {
-            std::cout << "Nem melyul folyamatosan.";
+            std::cout << "Not continously getting deeper.";
         }
 
         //c.
-
         std::cout << std::endl;
         std::cout << "c)" << std::endl;
 
-        std::cout << "A godor legnagyobb melysege a: " << maxMely << "-ik meternel van, melysege pedig: " << static_cast<int>(adatok[maxMely]) << " m." << std::endl;
+        std::cout << "The lowest point in the pit a: " << max_deep << " at meter, the deepnes: " << static_cast<int>(datas[max_deep]) << " meter." << std::endl;
 
         //d.
-        /*Az elsõ gödör a 7. méteren kezdõdik. Az elsõ gödör 16 méter hosszan tart, legnagyobb
-      mélysége 4 méter, térfogata 440 m3. A második gödör a 26. méternél kezdõdik, 3 méter hosszan
-      tart, térfogata 60 m3.*/
-
         std::cout << std::endl;
         std::cout << "d)" << std::endl;
 
-
-        //V = a x b x c
-
-        int godorterfSum = 0;
-        for (int i = start; i < end; i++) {
-            godorterfSum += adatok[i] * 10;
+        int pit_volumetric_sum = 0;
+        for (int i = start_of_pit; i < end_of_pit; i++) {
+            pit_volumetric_sum += datas[i] * 10;
         }
-        std::cout << "A terfogata: " << godorterfSum << " m^3." << std::endl;
+        std::cout << "The volumetric is: " << pit_volumetric_sum << " m^3." << std::endl;
 
-        //e. ki kell számolni az 1 méter mélyre esõ térfogatot, majd kivonni a már kiszámolt térfogatból
-
+        //e.
         std::cout << std::endl;
         std::cout << "e)" << std::endl;
 
 
-        int vizterfSum = (end - start) * 10;
-        std::cout << "A vizmennyiseg: " << godorterfSum - vizterfSum << " m^3." << std::endl;
-
-        //int sum = std::accumulate(terfogat.begin(), terfogat.end(), 0);
-
-        /*std::vector<char> path;
-      // ...
-      for (char i: path)
-          std::cout << i << ' ';*/
-          /* int sum = 1;
-           for (int i : terfogat) {
-               sum += terfogat[i-1];
-           }*/
+        int water_volumetric_sum = (end_of_pit - start_of_pit) * 10;
+        std::cout << "The amount of water: " << pit_volumetric_sum - water_volumetric_sum << " m^3." << std::endl;
     }
 }
