@@ -58,8 +58,8 @@ int main() {
     godrok.godrokErettsegiExec();
 
     // Futar Erettsegi task
-    Futar futar;
-    futar.futarExec();
+    Courier futar;
+    futar.courierExec();
 
     // Primenumber task
     PrimeNum primeNum;

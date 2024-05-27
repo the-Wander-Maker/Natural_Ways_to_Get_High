@@ -6,99 +6,99 @@
 #include <math.h>
 
 void fileReading(std::ifstream& inputFile, const std::string& filename) {
-    std::cout << "1. feladat: " << std::endl << std::endl;
+    std::cout << "1. task: " << std::endl << std::endl;
     try {
         inputFile.open(filename);
 
         if (!inputFile.is_open()) {
-            throw std::runtime_error("File could not open: ");
+            throw std::runtime_error("File could not be opened: ");
         }
     }
     catch (std::runtime_error) {
-        std::cout << "File could not open: " << filename << std::endl;
+        std::cout << "File could not be opened: " << filename << std::endl;
     }
 
     std::cout << "File reading success" << std::endl;
 }
 
-void Futar::futarExec() {
+void Courier::courierExec() {
     std::ifstream inputFile;
     fileReading(inputFile, "tavok.txt");
 
-    std::vector<fuvarAdatok> hetiFuvarok;
+    std::vector<carriageDatas> weaklyCouriages;
 
-    fuvarAdatok egyFuvar;
+    carriageDatas oneCouriage;
 
     while (!inputFile.eof()) {
-        inputFile >> egyFuvar.melyikNap >> egyFuvar.fuvarokSzama >> egyFuvar.megtettKm;
-        hetiFuvarok.push_back(egyFuvar);
+        inputFile >> oneCouriage.whichDay >> oneCouriage.numofCarriage >> oneCouriage.kmDone;
+        weaklyCouriages.push_back(oneCouriage);
     }
 
-    fuvarAdatok swap;
+    carriageDatas swap;
     int min;
-    for (int i = 0; i < (hetiFuvarok.size() - 1); ++i)
+    for (int i = 0; i < (weaklyCouriages.size() - 1); ++i)
     {
         min = i;
-        for (int j = i + 1; j < (hetiFuvarok.size()); ++j)
+        for (int j = i + 1; j < (weaklyCouriages.size()); ++j)
         {
-            if ((hetiFuvarok[j].melyikNap < hetiFuvarok[min].melyikNap) || (hetiFuvarok[j].melyikNap == hetiFuvarok[min].melyikNap && hetiFuvarok[j].fuvarokSzama < hetiFuvarok[min].fuvarokSzama))
+            if ((weaklyCouriages[j].whichDay < weaklyCouriages[min].whichDay) || (weaklyCouriages[j].whichDay == weaklyCouriages[min].whichDay && weaklyCouriages[j].numofCarriage < weaklyCouriages[min].numofCarriage))
             {
                 min = j;
             }
         }
         if (min != i)
         {
-            swap = hetiFuvarok[i];
-            hetiFuvarok[i] = hetiFuvarok[min];
-            hetiFuvarok[min] = swap;
+            swap = weaklyCouriages[i];
+            weaklyCouriages[i] = weaklyCouriages[min];
+            weaklyCouriages[min] = swap;
         }
 
     }
-    for (int i = 0; i < hetiFuvarok.size(); ++i) {
-        std::cout << hetiFuvarok[i].melyikNap << ", " << hetiFuvarok[i].fuvarokSzama << ", " << hetiFuvarok[i].megtettKm << std::endl;
+    for (int i = 0; i < weaklyCouriages.size(); ++i) {
+        std::cout << weaklyCouriages[i].whichDay << ", " << weaklyCouriages[i].numofCarriage << ", " << weaklyCouriages[i].kmDone << std::endl;
     }
 
     /* Írja ki a képernyõre, hogy mekkora volt a hét legelsõ útja kilométerben! Figyeljen arra,
         hogy olyan állomány esetén is helyes értéket adjon,
         amiben például a hét elsõ napján a futár nem dolgozott! */
-    std::cout << std::endl << "2. feladat: " << std::endl << std::endl;
+    std::cout << std::endl << "2. task: " << std::endl << std::endl;
 
-    std::cout << hetiFuvarok[0].megtettKm << std::endl;
+    std::cout << weaklyCouriages[0].kmDone << std::endl;
 
     // Írja ki a képernyõre, hogy mekkora volt a hét utolsó útja kilométerben!
-    std::cout << std::endl << "3. feladat: " << std::endl << std::endl;
+    std::cout << std::endl << "3. task: " << std::endl << std::endl;
 
-    std::cout << hetiFuvarok.back().megtettKm << std::endl;
+    std::cout << weaklyCouriages.back().kmDone << std::endl;
 
     // Tudjuk, hogy a futár minden héten tart legalább egy szabadnapot. Írja ki a képernyõre,
     // hogy a hét hányadik napjain nem dolgozott a futár!
-    std::cout << std::endl << "4. feladat: " << std::endl << std::endl;
+    std::cout << std::endl << "4. task: " << std::endl << std::endl;
 
-    bool dolgozik[7] = { false, false, false, false, false, false, false };
+    bool working[7] = { false, false, false, false, false, false, false };
 
-    for (int i = 0; i < hetiFuvarok.size(); ++i) {
-        dolgozik[hetiFuvarok[i].melyikNap - 1] = true;
+    for (int i = 0; i < weaklyCouriages.size(); ++i) {
+        working[weaklyCouriages[i].whichDay - 1] = true;
     }
     for (int i = 0; i < 7; ++i) {
-        if (dolgozik[i] == false) {
+        if (working[i] == false) {
             std::cout << i + 1 << std::endl;
         }
     }
 
     // Írja ki a képernyõre, hogy a hét melyik napján volt a legtöbb fuvar! Amennyiben több nap
     // is azonos, maximális számú fuvar volt, elegendõ ezek egyikét kiírnia.
-    std::cout << std::endl << "5. feladat: " << std::endl << std::endl;
+    std::cout << std::endl << "5. task: " << std::endl << std::endl;
 
-    std::vector<int> fuvarokMax;
+    std::vector<int> couriagesMax;
 
-    for (int i = 0; i < hetiFuvarok.size() - 1; ++i) {
-        if (hetiFuvarok[i].melyikNap != (hetiFuvarok[i + 1].melyikNap)) {
-            fuvarokMax.push_back(hetiFuvarok[i].fuvarokSzama);
+    for (int i = 0; i < weaklyCouriages.size() - 1; ++i) {
+        if (weaklyCouriages[i].whichDay != (weaklyCouriages[i + 1].whichDay)) {
+            couriagesMax.push_back(weaklyCouriages[i].numofCarriage);
         }
     }
-    fuvarokMax.push_back(hetiFuvarok.back().fuvarokSzama);
-    for (int i = 0; i < fuvarokMax.size(); ++i) {
-        std::cout << fuvarokMax[i] << std::endl;
+    couriagesMax.push_back(weaklyCouriages.back().numofCarriage);
+    for (int i = 0; i < couriagesMax.size(); ++i) {
+        std::cout << couriagesMax[i] << std::endl;
     }
 
     /*Számítsa ki és írja a képernyõre a mintának megfelelõen, hogy az egyes napokon hány
@@ -109,15 +109,15 @@ void Futar::futarExec() {
     */
     //std::cout << std::endl << "6. feladat: " << std::endl << std::endl;
 
-    std::cout << std::endl << "6. feladat: " << std::endl << std::endl;
+    std::cout << std::endl << "6. task: " << std::endl << std::endl;
 
-    std::vector<int> napok{ 0, 0, 0, 0, 0, 0, 0 };
+    std::vector<int> days{ 0, 0, 0, 0, 0, 0, 0 };
 
-    for (int i = 0; i < hetiFuvarok.size(); ++i) {
-        napok[hetiFuvarok[i].melyikNap - 1] += hetiFuvarok[i].megtettKm;
+    for (int i = 0; i < weaklyCouriages.size(); ++i) {
+        days[weaklyCouriages[i].whichDay - 1] += weaklyCouriages[i].kmDone;
     }
     for (int i = 0; i < 7; ++i) {
-        std::cout << i + 1 << ". nap " << napok[i] << " km" << std::endl;
+        std::cout << i + 1 << ". day " << days[i] << " km" << std::endl;
     }
 
     /*A futár az egyes utakra az út hosszától függõen kap fizetést az alábbi táblázatnak
@@ -129,27 +129,27 @@ void Futar::futarExec() {
     21 – 30 km 2 000 Ft
     Kérjen be a felhasználótól egy tetszõleges távolságot, és határozza meg, hogy mekkora
     díjazás jár érte! Ezt írja a képernyõre!*/
-    std::cout << std::endl << "7. feladat: " << std::endl << std::endl;
+    std::cout << std::endl << "7. task: " << std::endl << std::endl;
 
-    std::cout << "Adjon meg egy tetszoleges tavolsagot: " << std::endl;
+    std::cout << "Give an optional distance data: " << std::endl;
 
-    int tavolsag = 0;
-    std::cin >> tavolsag;
+    int distance = 0;
+    std::cin >> distance;
     std::cout << std::endl;
 
-    if (1 <= tavolsag && tavolsag <= 2) {
+    if (1 <= distance && distance <= 2) {
         std::cout << "500 Ft" << std::endl;
     }
-    else if (3 <= tavolsag && tavolsag <= 5) {
+    else if (3 <= distance && distance <= 5) {
         std::cout << "700 Ft" << std::endl;
     }
-    else if (6 <= tavolsag && tavolsag <= 10) {
+    else if (6 <= distance && distance <= 10) {
         std::cout << "900 Ft" << std::endl;
     }
-    else if (11 <= tavolsag && tavolsag <= 20) {
+    else if (11 <= distance && distance <= 20) {
         std::cout << "1400 Ft" << std::endl;
     }
-    else if (21 <= tavolsag && tavolsag <= 30) {
+    else if (21 <= distance && distance <= 30) {
         std::cout << "2000 Ft" << std::endl;
     }
 
@@ -163,7 +163,7 @@ void Futar::futarExec() {
     …*/
 
     //TODO
-    std::cout << std::endl << "8. feladat: " << std::endl << std::endl;
+    std::cout << std::endl << "8. task: " << std::endl << std::endl;
 
     // Create and open a text file
     std::ofstream MyFile("dijazas.txt");
@@ -182,5 +182,5 @@ void Futar::futarExec() {
 
     /*Határozza meg, és írja ki a képernyõre, hogy a futár mekkora összeget kap a heti
     munkájáért!*/
-    std::cout << std::endl << "9. feladat: " << std::endl << std::endl;
+    std::cout << std::endl << "9. task: " << std::endl << std::endl;
 }

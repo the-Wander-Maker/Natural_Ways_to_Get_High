@@ -1,16 +1,16 @@
 #pragma once
 
 // TODO refactor
-struct fuvarAdatok {
-    int melyikNap;
-    int fuvarokSzama;
-    int megtettKm;
+struct carriageDatas {
+    int whichDay;
+    int numofCarriage;
+    int kmDone;
 };
 
-class Futar {
+class Courier {
 public:
-    Futar(){}
-    ~Futar(){}
+    Courier(){}
+    ~Courier(){}
 
-    void futarExec();
+    void courierExec();
 };
