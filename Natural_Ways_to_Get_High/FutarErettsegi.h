@@ -1,6 +1,5 @@
 #pragma once
 
-// TODO refactor
 struct carriageDatas {
     int whichDay;
     int numofCarriage;

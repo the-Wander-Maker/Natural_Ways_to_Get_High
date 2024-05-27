@@ -146,7 +146,6 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="primenumber.cpp" />
     <ClCompile Include="randomdice.cpp" />
-    <ClCompile Include="stringswitch.cpp" />
     <ClCompile Include="stringswitch2.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -160,7 +159,6 @@
     <ClInclude Include="HeronFormula.h" />
     <ClInclude Include="PrimeNum.h" />
     <ClInclude Include="RandomDice.h" />
-    <ClInclude Include="StringSwitch.h" />
     <ClInclude Include="StringSwitch2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

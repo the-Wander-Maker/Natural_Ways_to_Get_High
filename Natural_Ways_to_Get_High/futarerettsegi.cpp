@@ -162,7 +162,7 @@ void Courier::courierExec() {
     1. nap 3. út: 2000 Ft
     …*/
 
-    //TODO
+    //TODO end the task
     std::cout << std::endl << "8. task: " << std::endl << std::endl;
 
     // Create and open a text file

@@ -69,9 +69,6 @@
     <ClCompile Include="randomdice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="stringswitch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="stringswitch2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -105,9 +102,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RandomDice.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StringSwitch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StringSwitch2.h">
