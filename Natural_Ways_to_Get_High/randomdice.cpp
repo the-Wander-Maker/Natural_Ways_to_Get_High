@@ -3,31 +3,31 @@
 #include <random>
 
 void RandomDice::randomDiceExec() {
-    unsigned dobasosszes;
-    std::cout << "Kerem adja meg a dobasok szamat!" << std::endl;
-    std::cin >> dobasosszes;
+    unsigned cointoss_sum;
+    std::cout << "Please give the number of flings: " << std::endl;
+    std::cin >> cointoss_sum;
 
     std::random_device r;
 
     std::default_random_engine e1(r());
     std::uniform_int_distribution<int> uniform_dist(1, 2);
 
-    int feldobas;
-    unsigned fejdarab = 0;
-    unsigned irasdarab = 0;
-    for (unsigned i = 0; i < dobasosszes; i++) {
-        feldobas = uniform_dist(e1);
-        if (feldobas == 1) {
-            fejdarab++;
+    int cointoss;
+    unsigned head_count = 0;
+    unsigned tail_count = 0;
+    for (unsigned i = 0; i < cointoss_sum; i++) {
+        cointoss = uniform_dist(e1);
+        if (cointoss == 1) {
+            head_count++;
         }
         else {
-            irasdarab += 1;
+            tail_count += 1;
         }
     }
 
-    std::cout << "Ennyiszer volt fej a dobas: " << fejdarab << '\n';
-    std::cout << "Ennyiszer volt iras a dobas: " << irasdarab << '\n';
+    std::cout << "The number of head flings : " << head_count << '\n';
+    std::cout << "The number of tail flings : " << tail_count << '\n';
 
-    std::cout << "A fejdobasok szazalekos aranya: " << (static_cast<double>(fejdarab) / dobasosszes) * 100 << "%" << std::endl;
-    std::cout << "A irasdobasok szazalekos aranya: " << (static_cast<double>(irasdarab) / dobasosszes) * 100 << "%" << std::endl;
+    std::cout << "Coindtoss head in percentage : " << (static_cast<double>(head_count) / cointoss_sum) * 100 << "%" << std::endl;
+    std::cout << "Cointoss tail in percentage : " << (static_cast<double>(tail_count) / cointoss_sum) * 100 << "%" << std::endl;
 }
